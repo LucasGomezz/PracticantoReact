@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import vehicles from './data/vehicles.js';
-import VehicleView from './views/VehicleView.jsx';
+import juegos from './data/juegos.js';
+import JuegosView from './views/JuegosView.jsx';
+import DescriptionView from './views/DescriptionView.jsx';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+
 
 const rutas = [
   {
@@ -13,17 +18,23 @@ const rutas = [
   }
 ]
 
-vehicles.forEach(vehiculo => {
+juegos.forEach(juego => {
   rutas.push({
-    path: vehiculo.name,
-    element: <VehicleView vehicle={vehiculo}/>
+    path: juego.url,
+    element: <JuegosView juego={juego}/>
+  })
+  rutas.push({
+    path: juego.description,
+    element: <DescriptionView description={juego.description}/>
   })
 })
+
+
 
 const router = createBrowserRouter(rutas);
 //Obtiene el elemento y muestra que renderizar
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router}/>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

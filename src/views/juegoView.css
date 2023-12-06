@@ -1,9 +1,9 @@
-.vehicleView{
+.juegoView{
     max-width:90% ;
     margin: auto;
     text-align: center;
 }
-.vehicleView img{
+.juegoView img{
    display: block;
    max-width: 100%;
    text-align: center;

@@ -1,14 +1,25 @@
 import "./card.css" 
 import { Link } from "react-router-dom";
 
-function Card({title = "tituloso ", description = "descripcion por defecto"}){
-    //Lo ideal es que cada vehiculo tenga la direccion porque el titulo no puede coincidir
-    return (<div className="card">
-        <Link to={title}>
-            <h2>{title}</h2>
+function Card({title = "titulo", description = "descripcion por defecto", image = "imagen", linkea = false}){
+    
+    const titlePath = `/${title.toLowerCase()}`;// agrega a la raiz
+    const descriptionPath = `/${description.toLowerCase()}`;
+  
+    return (
+      <div className="card" style={{ backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat" }}>
+        <Link to={titlePath}>
+          <h2>{title}</h2>
         </Link>
-        <p>{description}</p>
-    </div>)
-}
+        {linkea ? (
+          <h2>{description}</h2>
+        ) : (
+          <Link to={descriptionPath}>
+            <h2>{description}</h2>
+          </Link>
+        )}
+      </div>
+    );
+  }
 
 export default Card;
