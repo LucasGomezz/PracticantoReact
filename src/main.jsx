@@ -1,15 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+import './css/index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import juegos from './data/juegos.js';
 import JuegosView from './views/JuegosView.jsx';
 import DescriptionView from './views/DescriptionView.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-
-
 
 const rutas = [
   {
@@ -28,8 +25,6 @@ juegos.forEach(juego => {
     element: <DescriptionView description={juego.description}/>
   })
 })
-
-
 
 const router = createBrowserRouter(rutas);
 //Obtiene el elemento y muestra que renderizar

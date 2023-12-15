@@ -1,7 +1,8 @@
 import React from 'react';
-import "./JuegoView.css"
+import '../css/juegoView.css';
 import Card from '/src/components/Card.jsx';
 import juegos from '/src/data/juegos.js';
+import Header from '../components/Header';
 
 function DescriptionView({description})  {
     const listaJuegos = juegos.map(juego => {
@@ -11,6 +12,7 @@ function DescriptionView({description})  {
     })
   
     return <div className='App'>
+      <Header/>
       <h1>Video juegos</h1>
       <div className='container'>
         {listaJuegos}
