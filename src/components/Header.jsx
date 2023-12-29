@@ -31,8 +31,8 @@ function Header() {
                 <h1 className='logo'>LOGO</h1>
                 <nav>
                     <ul className='row categorias'>
-                        <li>Inicio</li>
-                        <li>Categorias</li>
+                        <li><a href="/">Inicio</a></li>
+                        <li> <a href="/categorias">Categorias</a></li>
                         <li>Mis juegos</li>
                     </ul>
                 </nav>

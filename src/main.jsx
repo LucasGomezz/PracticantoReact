@@ -7,11 +7,16 @@ import juegos from './data/juegos.js';
 import JuegosView from './views/JuegosView.jsx';
 import DescriptionView from './views/DescriptionView.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CategoryView from './views/CategoryView.jsx';
 
 const rutas = [
   {
     path: "/",
     element: <App />
+  },
+  {
+    path:"/categorias",
+    element: <CategoryView/>
   }
 ]
 

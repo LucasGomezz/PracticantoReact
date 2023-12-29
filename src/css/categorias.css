@@ -1,0 +1,16 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.juegos{
+    display: flex;
+}
+.juegos div{
+    margin: 0.5rem;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
